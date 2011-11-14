@@ -1,5 +1,5 @@
 class Array
-  def to_hash ()
+  def to_hash
     hash = Hash[*self.flatten(1)]
     return hash
   end
@@ -11,12 +11,12 @@ class Array
   def subarray_count(subarray)
     count = 0
     0.step(self.length, 1) do |i|        
-      count += 1 if self.slice(i, subarray.length) == subarray
+      count += 1 if self.slice(i, subarray.length) == subarray  
     end
     return count    
    end
 
-  def occurences_count ()
+  def occurences_count
     hash = Hash.new(0)
     self.each do |i|
       hash[i] += 1
